@@ -13,3 +13,46 @@ body {
     color-scheme: dark;
   }
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#stars {
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, .05),
+    -255px 123px 0 0 #fff,
+    123px -222px 1px 1px #fff;
+}
+
+#stars2 {
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: 190px 421px 0 0 #fff,
+    -333px 222px 1px 0 #fff;
+}
+
+#stars3 {
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: -400px 100px 1px 0 #fff,
+    333px -333px 0 0 #fff;
+}
+
+#starfield {
+  animation: animStar 50s linear infinite;
+}
+
+@keyframes animStar {
+  from {
+    transform: translateY(0)
+  }
+
+  to {
+    transform: translateY(-1000px)
+  }
+}
